@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="inventory.css">
+    <title>Selection Page</title>
+</head>
+<body>
+<div class="add_roaster_form">
+    <form method="POST" action="">
+        <input name="name" type="text" placeholder="Name">
+        <input name="city" type="text" placeholder="City">
+        <input name="country" type="text" placeholder="Country">
+        <input type = "submit" value ="Add Roaster">
+    
+    </form>
+</div>
+
+<div class="add_coffee_form">
+    <form method="POST" action="">
+        <select class="roaster" name="coffee_roaster"></select>
+        <select class = "blend" name="blend"></select>
+        <select class ="shop" name="shop"></select>
+        <input name="stock" type="number" placeholder="Stock Amount">
+        <input name="image" type="file" accept="image/*">
+    </form>
+</div>
+
+    <script src="inventory.js"></script>
+</body>
+</html>

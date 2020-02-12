@@ -3,3 +3,15 @@
 * {
     font-family: 'Raleway', sans-serif;  
 }
+
+ul {
+    list-style: none;
+    flex-direction: row;
+}
+
+li {
+    width: 20em;
+    height: 20em;
+    margin-right: 0;
+    display: inline-flex
+}
