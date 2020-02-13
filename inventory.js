@@ -9,6 +9,7 @@ fetch("http://localhost:3000/coffee_roasters")
     roasters.forEach(roaster => {
         let roasterName = document.createElement('option')
         roasterName.innerText = roaster.name
+        roasterName.value = roaster.id
         roaster_class.append(roasterName)
        
 })
@@ -20,6 +21,7 @@ fetch("http://localhost:3000/blends")
     blends.forEach(blend => {
         let blendName = document.createElement('option')
         blendName.innerText = blend.name 
+        blendName.value = blend.id
         blend_class.append(blendName)
     })
 })
@@ -30,6 +32,7 @@ fetch("http://localhost:3000/shops")
     shops.forEach(shop => {
         let shopName = document.createElement('option')
         shopName.innerText = shop.name
+        shopName.value = shop.id
         shop_class.append(shopName)
     })
 })
