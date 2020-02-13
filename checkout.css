@@ -17,15 +17,59 @@ body {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    color: black;
+    color: black; 
 }
 
-div {
+.coffeeNameContainer {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    color: black;
+    color: black;  
 }
+
+.coffeeName {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+.coffeePrice {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+} 
+
+.coffeeImage {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+input {
+    height: 1.2rem;
+    width: 4rem;
+}
+
+.button{
+    height: 1.2rem;
+    width: 4rem;
+}
+
+
 
 
 

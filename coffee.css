@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,9 +44,12 @@ table {
 	border-spacing: 0;
 }
 
+
+
 body {
     font-family: 'Raleway', sans-serif; 
 }
+
 
 header {
     height: 17em;
@@ -60,43 +58,39 @@ header {
     justify-content: flex-end;
     }
 
-.logo {
-    width: 20em;
-    height: 12em;
-    padding-right: 15em;
-    align-self: center;
-}
-
 .cart {
-width: 2.5em;
-height: 2.5em;
-padding-top: 2em;
+        width: 2.5em;
+        height: 2.5em;
+        padding-top: 2em;
+        padding-right: 3em;;
+        
+ }
 
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.icons {
-padding: 0.3em;
+li {
+    width: 20em;
+    height: 20em;
+    margin-right: 0;
 }
 
-a { 
-    color:black; 
-    text-decoration: none; 
-    padding: 1em;
-    padding-right: 2em;
+
+
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    padding: 3em;
+    padding-right: 10.5em;
+   
 }
 
-a:visited { 
-    text-decoration: none; 
-    color:grey; 
+h4 {
+    text-align: center;
 }
 
-a:hover, a:active {
-     text-decoration: none; 
-     color:black 
-    }
 
-
-.fontpageimg {
-
-    width: 100%;
-}

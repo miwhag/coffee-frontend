@@ -5,12 +5,14 @@ fetch(`http://localhost:3000/coffees/${id}`)
 .then(response => response.json())
 .then(coffee => {
     console.log(coffee)
+    // const div = document.createElement('div')
     let coffeePicture = new Image(400,400)
     let coffeeBlend = document.createElement('h2')
     let coffeeFlavor = document.createElement('p')
     let coffeeName = document.createElement('h2')
     let coffeeCity = document.createElement('p')
     let coffeeCountry = document.createElement('p')
+  
 
     coffeePicture.src = coffee.image
     coffeeBlend.innerText = coffee.blend.name
@@ -18,6 +20,19 @@ fetch(`http://localhost:3000/coffees/${id}`)
     coffeeName.innerText = coffee.coffee_roaster.name
     coffeeCity.innerText = coffee.coffee_roaster.city
     coffeeCountry.innerText = coffee.coffee_roaster.country
+   
 
     document.body.append(coffeePicture, coffeeBlend, coffeeFlavor, coffeeName, coffeeCity, coffeeCountry)
+
+    // form.addEventListener('click', function(){
+    //     fetch(`http://localhost:3000/carts/${id}`), {
+    //         method: "PATCH",
+    //         headers:{
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({
+
+    //         })
+    //     }
+    // })
 })

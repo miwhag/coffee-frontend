@@ -54,6 +54,10 @@ table {
     font-family: 'Raleway', sans-serif;  
 }
 
+body {
+    font-family: 'Raleway', sans-serif;  
+}
+
 .add_roaster_form {
     display: block;
 }

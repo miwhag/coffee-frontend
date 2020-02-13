@@ -8,12 +8,13 @@ fetch('http://localhost:3000/coffees')
         
         let coffeeContainer = document.createElement('li')
         let coffeePicture= new Image(300,300)
+        let coffeeText = document.createElement('h4')
 
         coffeeContainer.innerHTML = `<a href="about_coffee.html?id=${coffee.id}">${coffee.coffee_roaster.name}${coffee.blend.name}</a>`
         coffeePicture.src = coffee.image
 
         ul.append(coffeeContainer)
-        coffeeContainer.append(coffeePicture)
+        coffeeContainer.append(coffeePicture,coffeeText)
     })
 })
 
@@ -38,7 +39,7 @@ fetch('http://localhost:3000/coffees')
 // form.action = `localhost:3000/users/${li.dataset.id}`
 // form.method = "POST"
 // form.innerHTML = `
-// <input type"text" placeholder="Name" name="name" valye ="${li.dataset.name}"
+// <input type"text" placeholder="Name" name="name" value ="${li.dataset.name}"
 // <input type="submit" value="update this user"/>
 // <input type="hidden" name="_method" value="put"/>`
 // li.append(form)
