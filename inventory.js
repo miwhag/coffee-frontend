@@ -37,14 +37,45 @@ fetch("http://localhost:3000/shops")
     })
 })
 
+const tbody = document.querySelector('tbody')
 fetch('http://localhost:3000/coffees')
 .then(response => response.json())
 .then(coffees => {
     coffees.map(coffee => {
-    console.log(coffee)
-        let stock = document.createElement('p')
-        stock.innerText = `${coffee.coffee_roaster.name} ${coffee.blend.name} ${coffee.stock}`
-        document.body.append(stock)
+        let trTag = document.createElement('tr')
+        let tdTagRoaster = document.createElement('td')
+        let tdTagBlend = document.createElement('td')
+        let tdTagStock = document.createElement('td')
+        tdTagStock.className = "stock_number"
 
+        tdTagRoaster.innerText = coffee.coffee_roaster.name
+        tdTagBlend.innerText = coffee.blend.name
+        tdTagStock.innerText = coffee.stock
+        
+        tbody.append(trTag)
+        trTag.append(tdTagRoaster, tdTagBlend, tdTagStock)
+
+        // let stock = document.createElement('p')
+        // stock.innerText =`${coffee.blend.name} ${coffee.stock}`
+        // document.body.append(stock)
     })
+
+
+
+
+
+
+    const table = document.querySelector('table')
+    function makeTableRow(coffeeObject) {
+        let roasterTableName = document.createElement('td')
+        let blendTableName = document.createElement('td')
+        let stockTableName = document.createElement('td')
+
+        roasterTableName.innerText = "Roaster"
+        blendTableName.innerText = "Blend"
+        stockTableName.innerText = "Stock Amount"
+
+        table.append(roasterTableName, blendTableName, stockTableName)
+
+    }
 })
