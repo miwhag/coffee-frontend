@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="inventory.css">
-    <title>Selection Page</title>
+    <title>Inventory Page</title>
 </head>
+
 <body>
-    <table></table>
-    <div class="add_roaster_form">
+    <header>
+        <img src="inventory.png">
+        <a href="index.html">
+            <img class="home" src="./home.png">
+        </a>
+       
+    </header>
+
+<main>
+    <table>
+        <thead>
+            <tr>
+                <th>Roaster</th>
+                <th>Blend</th>
+                <th>Stock Number</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        </tbody>
+    </table>
+
+<div class="coffe_forms">
+    <section>
+        <h1>Add Roaster</h1>
         <form method="POST" action="http://localhost:3000/coffee_roasters">
             <input name="name" type="text" placeholder="Name">
             <input name="city" type="text" placeholder="City">
@@ -15,9 +39,10 @@
             <input type = "submit" value ="Add Roaster">
         
         </form>
-    </div>
+    </section>
 
-    <div class="add_coffee_form">
+    <section>
+        <h1 > Add Coffee Blend</h1 >
         <form method="POST" action="http://localhost:3000/coffees">
             <select class="roaster" name="coffee_roaster"></select>
             <select class = "blend" name="blend"></select>
@@ -27,7 +52,9 @@
             <input name="image" id="image" type="text" placeholder="Img URL ">
             <input type="submit" value="Add Coffee"/>
         </form>
-    </div>
+    </section>
+
+    </main>
 
     <script src="inventory.js"></script>
 </body>

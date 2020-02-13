@@ -98,5 +98,45 @@ a:hover, a:active {
 
 .fontpageimg {
 
-    width: 100%;
+    width:100%;
+}
+
+.about_section {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.miwha {
+    width: 20em;
+    height: 20em;
+    padding-left: 5em;
+    padding-top: 5em; 
+    padding-right: 5em;
+}
+
+.miwha_about {
+    height: 10em;
+    align-self: center;
+    padding-top: 7em;
+}
+
+.alice_about {
+    height: 10em;
+    align-self: center;
+    /* padding-top: 7em; */
+    padding-left: 30em;
+}
+
+
+.alice {
+    width: 20em;
+    height: 20em;
+   
+
+}
+
+p {
+margin: 0;
+padding: 0;;
+    width: 40em;
 }
