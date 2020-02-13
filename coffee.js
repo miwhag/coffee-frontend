@@ -9,7 +9,7 @@ fetch('http://localhost:3000/coffees')
         let coffeeContainer = document.createElement('li')
         let coffeePicture= new Image(300,300)
 
-        coffeeContainer.innerHTML = `<a href="about_coffee.html?id=${coffee.id}">${coffee.coffee_roaster.name} ${coffee.blend.name}</a>`
+        coffeeContainer.innerHTML = `<a href="about_coffee.html?id=${coffee.id}">${coffee.coffee_roaster.name}${coffee.blend.name}</a>`
         coffeePicture.src = coffee.image
 
         ul.append(coffeeContainer)
@@ -50,5 +50,5 @@ fetch('http://localhost:3000/coffees')
 //li.dataset.name = user.name
 
 
-{/* <main class=""/> */}
+// {/* <main class=""/> */}
 
