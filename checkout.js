@@ -31,21 +31,27 @@ fetch(cart_url)
             coffeePrice.innerText = coffee.price
             coffeeQuantity.type = "number"
             button.innerText = "remove"; 
-            button.addEventListener ("click", function() {
-                console.log(confirm("remove"))
-                div.remove()
-                fetch(cartid_url, {
-                    method: 'DELETE'
-                })
-            })
-           
+
             div.append(coffeeImg, coffeeName, coffeePrice, coffeeQuantity, button)
             document.body.appendChild(div)
 
-
+            button.addEventListener ("click", function(){
+                console.log(confirm("remove"))
+                fetch(`http://localhost:3000/delete_cart_item/${id}`), {
+                   method: "PATCH",
+                    headers:{
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        cart_id:nil
+                    })
+                    }
+           
                 })
             })
         })
+    })
+    
 
 
         
