@@ -2,30 +2,102 @@ console.log('Hit!!')
 const searchParams = new URLSearchParams(window.location.search)
 const id = searchParams.get('id')
 
-const coffee_url= "http://localhost:3000/coffees"
+const cart_url = "http://localhost:3000/carts"
+const cartid_url = `http://localhost:3000/carts/${id}`
 
-const div= document.querySelector('div')
-fetch(coffee_url)
+// const div= document.querySelector('div')
+fetch(cart_url)
     .then(res => res.json())
-    // .then(console.log)
-    .then(coffees =>{
-        coffees.map(coffee =>{
-            console.log(coffee)
+    .then(carts =>{
+        console.log(carts)
+        carts.map(cart =>{
+            cart.coffees.map(coffee =>{  
             let div = document.createElement('div')
-            div.ClassName = 'quantityContainer'
-            let h2 = document.createElement('h2')
-            let h3 = document.createElement('h3')
-            let myImage = new Image(100, 200);
-            let p = document.createElement('p')
+            let coffeeName = document.createElement('h5')
+            let coffeeImg = new Image (200,200)
+            let coffeePrice = document.createElement('h5')
+            let coffeeQuantity = document.createElement ('input')
+            const button = document.createElement("button")
 
-            h3.innerText = coffee.price
-            h2.innerText = coffee.stock
-            myImage.src = coffee.image
-            p.innerText = `${coffee.coffee_roaster.name}${coffee.blend.name}`
+            div.className = 'coffeeNameContainer'
+            coffeeName.className = 'coffeeName'
+            coffeePrice.className = 'coffeePrice'
+            coffeeImg.className = 'coffeeImg'
+            button.className = 'button'
+            coffeeQuantity.className = 'coffeequantity'
 
-            
+            coffeeName.innerText = `${coffee.coffee_roaster.name}${coffee.blend.name}`
+            coffeeImg.src = coffee.image
+            coffeePrice.innerText = coffee.price
+            coffeeQuantity.type = "number"
+            button.innerText = "remove"; 
+            button.addEventListener ("click", function() {
+                console.log(confirm("remove"))
+                div.remove()
+                fetch(cartid_url, {
+                    method: 'DELETE'
+                })
+            })
+           
+            div.append(coffeeImg, coffeeName, coffeePrice, coffeeQuantity, button)
             document.body.appendChild(div)
-            div.append(myImage, p, h3, h2)
-            
+
+
+                })
+            })
         })
-    })
+
+
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // updateCartTotal()
+        // function updateCartTotal() {
+        //     let cartItemContainer= document.getElementsByClassName('coffeeNameContainer')[0]
+        //     // console.log(cartItemContainer)
+        //     let cartRows = cartItemContainer.getElementByClassName('coffeePrice')
+        //     for (let i = 0; i < cartRows.length; i++) {
+        //         let cartRow = cartRows[i]
+        //         let priceElement = cartRow.getElementByClassName('coffeePrice')[0]
+        //         let quantityElement = cartRow.getElementByClassName('coffeequantity')[0]
+                
+        //         let price = priceElement.innerText
+        //         console.log(price)
+        //     }
+        // }
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                // const number = document.getElementsById("number")[0];
+            // document.body.appendChild(button);
+
+
+
+

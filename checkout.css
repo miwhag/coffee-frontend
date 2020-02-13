@@ -1,7 +1,7 @@
 
 h1{
   font-size: 50px;
-  color: white;
+  color: black;
   text-transform: uppercase;
   font-weight: normal;
   line-height: 1;
@@ -10,20 +10,66 @@ h1{
   /* padding-top: -60px; */
 }
 body {
-    background-color: black;
+    background-color: white;
 }
 
 .first {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    color: white;
+    color: black; 
 }
 
-div {
+.coffeeNameContainer {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    color: white;
+    color: black;  
 }
+
+.coffeeName {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+.coffeePrice {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+} 
+
+.coffeeImage {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+input {
+    height: 1.2rem;
+    width: 4rem;
+}
+
+.button{
+    height: 1.2rem;
+    width: 4rem;
+}
+
+
+
+
 
