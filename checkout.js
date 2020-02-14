@@ -35,74 +35,23 @@ fetch(cart_url)
             div.append(coffeeImg, coffeeName, coffeePrice, coffeeQuantity, button)
             document.body.appendChild(div)
 
+            console.log(coffee.cart_id)
+            console.log(coffee.id)
+
             button.addEventListener ("click", function(){
                 console.log(confirm("remove"))
-                fetch(`http://localhost:3000/delete_cart_item/${id}`), {
-                   method: "PATCH",
-                    headers:{
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        cart_id:nil
+            fetch(`http://localhost:3000/delete_cart_item/?cart_id=${coffee.cart_id}&coffee_id=${coffee.id}`,{
+            method: "PATCH",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ 
+                        })
                     })
-                    }
-           
                 })
             })
         })
     })
-    
-
-
-        
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // updateCartTotal()
-        // function updateCartTotal() {
-        //     let cartItemContainer= document.getElementsByClassName('coffeeNameContainer')[0]
-        //     // console.log(cartItemContainer)
-        //     let cartRows = cartItemContainer.getElementByClassName('coffeePrice')
-        //     for (let i = 0; i < cartRows.length; i++) {
-        //         let cartRow = cartRows[i]
-        //         let priceElement = cartRow.getElementByClassName('coffeePrice')[0]
-        //         let quantityElement = cartRow.getElementByClassName('coffeequantity')[0]
-                
-        //         let price = priceElement.innerText
-        //         console.log(price)
-        //     }
-        // }
-
-            
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
-                // const number = document.getElementsById("number")[0];
-            // document.body.appendChild(button);
 
 
 

@@ -1,3 +1,4 @@
+
 const select = document.querySelector('select')
 fetch("http://localhost:3000/coffee_roasters")
 .then( response => response.json())
@@ -10,3 +11,4 @@ fetch("http://localhost:3000/coffee_roasters")
             select.append(option)
     })
 })
+
