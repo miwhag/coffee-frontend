@@ -10,7 +10,7 @@ fetch('http://localhost:3000/coffees')
         let coffeePicture= new Image(300,300)
         let coffeeText = document.createElement('h4')
 
-        coffeeContainer.innerHTML = `<a href="about_coffee.html?id=${coffee.id}">${coffee.coffee_roaster.name}${coffee.blend.name}</a>`
+        coffeeContainer.innerHTML = `<a href="about_coffee.html?id=${coffee.id}">${coffee.coffee_roaster.name}<br>${coffee.blend.name}</a>`
         coffeePicture.src = coffee.image
 
         ul.append(coffeeContainer)
