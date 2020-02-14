@@ -20,11 +20,23 @@ body {
     font-family: 'Raleway', sans-serif; 
 }
 
-.first {
+.cartcolumn {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
     color: black; 
+}
+
+.item {
+    padding:0rem 2rem;
+}
+
+.name {
+    padding:0rem 5rem;
+}
+
+.quantity {
+    padding:0rem 1rem 0rem 0rem;
 }
 
 .coffeeNameContainer {
@@ -32,7 +44,14 @@ body {
     justify-content: space-around;
     list-style-type: none;
     color: black;  
+    align-items: center;
 }
+
+.coffeeNameContainer {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin: 1em;
+ } 
 
 .coffeeName {
     display: block;
@@ -42,6 +61,7 @@ body {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+ 
 }
 
 
@@ -53,6 +73,7 @@ body {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+  
 } 
 
 .coffeeImage {
@@ -69,19 +90,26 @@ body {
 input {
     height: 1.2rem;
     width: 4rem;
+    border-color: #696969;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    font-weight: 400;
+    max-width: 3.5rem;
+    padding: .78571rem;
 }
 
 .button{
-    height: 1.2rem;
+    height: 2rem;
     width: 4rem;
 }
 
-/* 
-header {
-    height: 17em;
-    background-color:whitesmoke;
-    } */
-
+.button:hover{
+    transition: 0.3s;
+    background-color: rgb(138, 138, 138);
+    color: rgb(8, 8, 8);
+    text-decoration: underline;
+}
 
 .icons {
     padding: 0.3em;
@@ -103,6 +131,12 @@ header {
     padding-top: 2em;
     
 }
+/* 
+quantitycontainer {
+    display: flex;
+    align-items: right;
+
+} */
 
 
 

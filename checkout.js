@@ -13,6 +13,7 @@ fetch(cart_url)
         carts.map(cart =>{
             cart.coffees.map(coffee =>{  
             let div = document.createElement('div')
+            let quantitycontainer = document.createElement('quantitycontainer')
             let coffeeName = document.createElement('h5')
             let coffeeImg = new Image (200,200)
             let coffeePrice = document.createElement('h5')
@@ -20,6 +21,7 @@ fetch(cart_url)
             const button = document.createElement("button")
 
             div.className = 'coffeeNameContainer'
+            quantityinput = 'quantitybox'
             coffeeName.className = 'coffeeName'
             coffeePrice.className = 'coffeePrice'
             coffeeImg.className = 'coffeeImg'
@@ -31,12 +33,13 @@ fetch(cart_url)
             coffeePrice.innerText = coffee.price
             coffeeQuantity.type = "number"
             button.innerText = "remove"; 
-
-            div.append(coffeeImg, coffeeName, coffeePrice, coffeeQuantity, button)
+        
+            quantitycontainer.appendChild(coffeeQuantity)
+            div.append(coffeeImg, coffeeName, coffeePrice,quantitycontainer, button)
             document.body.appendChild(div)
 
-            console.log(coffee.cart_id)
-            console.log(coffee.id)
+            // console.log(coffee.cart_id)
+            // console.log(coffee.id)
 
             button.addEventListener ("click", function(){
                 console.log(confirm("remove"))
