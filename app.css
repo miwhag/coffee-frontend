@@ -102,41 +102,41 @@ a:hover, a:active {
 }
 
 .about_section {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 5em;
+    
 }
 
-.miwha {
-    width: 20em;
-    height: 20em;
-    padding-left: 5em;
-    padding-top: 5em; 
-    padding-right: 5em;
-}
+.miwha_container, .alice_container {
+width: 32em;
 
-.miwha_about {
-    height: 10em;
-    align-self: center;
-    padding-top: 7em;
 }
-
-.alice_about {
-    height: 10em;
-    align-self: center;
-    /* padding-top: 7em; */
-    padding-left: 30em;
+.miwha_img, .alice_img {
+    width: 18em;
+    height: 18em;
+    padding-bottom: 2em;
+    padding-left: 4em;
 }
 
 
-.alice {
-    width: 20em;
-    height: 20em;
-   
-
+.miwha_bio, .alice_bio {
+width: 30em;
 }
 
-p {
-margin: 0;
-padding: 0;;
-    width: 40em;
-}
+
+h1{
+	font-size: 40px;
+	color: black;
+	text-transform: uppercase;
+	font-weight: normal;
+	line-height: 1;
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  h2 {
+      font-size: 3em;
+  }

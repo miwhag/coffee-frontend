@@ -1,20 +1,29 @@
 const params = new URLSearchParams(window.location.search)
 const id = params.get('id')
+let photo = document.querySelector('.photo')
+let info = document.querySelector('.info')
+
 
 fetch(`http://localhost:3000/coffees/${id}`)
 .then(response => response.json())
 .then(coffee => {
-    console.log(coffee)
-    console.log(coffee)
-    // const div = document.createElement('div')
-    let coffeePicture = new Image(400,400)
+    let coffeePicture = new Image
     let coffeeBlend = document.createElement('h2')
     let coffeeFlavor = document.createElement('p')
     let coffeeName = document.createElement('h2')
     let coffeeCity = document.createElement('p')
     let coffeeCountry = document.createElement('p')
     let button = document.createElement('button')
-  
+
+
+    coffeePicture.className = "image"
+    coffeeBlend.className = "blend"
+    coffeeFlavor.className = "flavor"
+    coffeeName.className = "name"
+    coffeeCity.className = "city"
+    coffeeCountry.className = "country"
+    button.className = "submit_button"
+
 
     coffeePicture.src = coffee.image
     coffeeBlend.innerText = coffee.blend.name
@@ -23,7 +32,12 @@ fetch(`http://localhost:3000/coffees/${id}`)
     coffeeCity.innerText = coffee.coffee_roaster.city
     coffeeCountry.innerText = coffee.coffee_roaster.country
     button.innerHTML = `<a href="checkout.html?id=${coffee.cart_id}">Add to Cart</a>`
-    document.body.append(coffeePicture, coffeeBlend, coffeeFlavor, coffeeName, coffeeCity, coffeeCountry,button)
+
+   
+    info.append(coffeeName, coffeeCity, coffeeCountry, coffeeBlend, coffeeFlavor,button)
+    photo.append(coffeePicture)
+   
+
 
     button.addEventListener('click', function(){
         console.log("HEllo")
