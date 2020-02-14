@@ -1,13 +1,13 @@
 const params = new URLSearchParams(window.location.search)
 const id = params.get('id')
+let photo = document.querySelector('.photo')
+let info = document.querySelector('.info')
+
 
 fetch(`http://localhost:3000/coffees/${id}`)
 .then(response => response.json())
 .then(coffee => {
-    console.log(coffee)
-    console.log(coffee)
-    // const div = document.createElement('div')
-    let coffeePicture = new Image(400,400)
+    let coffeePicture = new Image
     let coffeeBlend = document.createElement('h2')
     let coffeeFlavor = document.createElement('p')
     let coffeeName = document.createElement('h2')
