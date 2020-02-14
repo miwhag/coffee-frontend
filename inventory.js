@@ -2,6 +2,7 @@ const params = new URLSearchParams(window.location.search)
 const roaster_class = document.querySelector('.roaster')
 const blend_class = document.querySelector('.blend')
 const shop_class = document.querySelector('.shop')
+const form = document.querySelector('.coffee')
 
 fetch("http://localhost:3000/coffee_roasters")
 .then(response => response.json())
@@ -12,7 +13,7 @@ fetch("http://localhost:3000/coffee_roasters")
         roasterName.value = roaster.id
         roaster_class.append(roasterName)
        
-})
+    })
 })
 
 fetch("http://localhost:3000/blends")
@@ -61,10 +62,6 @@ fetch('http://localhost:3000/coffees')
     })
 
 
-
-
-
-
     const table = document.querySelector('table')
     function makeTableRow(coffeeObject) {
         let roasterTableName = document.createElement('td')
@@ -78,4 +75,28 @@ fetch('http://localhost:3000/coffees')
         table.append(roasterTableName, blendTableName, stockTableName)
 
     }
+})
+
+    fetch("http://localhost:3000/coffees/")
+    .then(response => response.json())
+    .then(coffees => {
+        console.log(coffees)
+    coffees.map(coffee => {
+        let option = document.createElement('option')
+        option.innerText = `${coffee.coffee_roaster.name} ${coffee.blend.name}`
+        option.value = coffee.id
+        form.append(option)
+        // let form = document.createElement('form')
+        // form.action = `http://localhost:3000/coffees/${id}`
+        // form.method = 'POST'
+        // form.innerHTML = `
+        //     <input type='submit' value ="Delete Coffee" /> 
+        //     <select class='remove' name="coffee"/>
+        //     <input type="hidden" name="_method" value="put" />
+        //     `
+        
+    
+        // document.body.appendChild(form)
+        
+    })
 })

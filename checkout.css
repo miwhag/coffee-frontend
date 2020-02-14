@@ -27,20 +27,31 @@ body {
     color: black; 
 }
 
+.item {
+    padding:0rem 2rem;
+}
+
+.name {
+    padding:0rem 5rem;
+}
+
+.quantity {
+    padding:0rem 1rem 0rem 0rem;
+}
+
 .coffeeNameContainer {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
     color: black;  
+    align-items: center;
 }
 
 .coffeeNameContainer {
     border-bottom: 1px solid black;
     padding-bottom: 1em;
     margin: 1em;
-}
-
-
+ } 
 
 .coffeeName {
     display: block;
@@ -75,9 +86,10 @@ body {
     font-weight: bold;
 }
 
+
 input {
     height: 1.2rem;
-    width: 3rem;
+    width: 4rem;
     border-color: #696969;
     border-style: solid;
     border-width: 1px;
@@ -85,12 +97,18 @@ input {
     font-weight: 400;
     max-width: 3.5rem;
     padding: .78571rem;
-    padding-left: 3rem;
 }
 
 .button{
     height: 2rem;
     width: 4rem;
+}
+
+.button:hover{
+    transition: 0.3s;
+    background-color: rgb(138, 138, 138);
+    color: rgb(8, 8, 8);
+    text-decoration: underline;
 }
 
 .icons {
@@ -113,12 +131,12 @@ header {
     padding-top: 2em;
     
 }
-
+/* 
 quantitycontainer {
     display: flex;
     align-items: right;
 
-}
+} */
 
 
 

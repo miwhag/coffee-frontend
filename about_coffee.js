@@ -14,7 +14,7 @@ fetch(`http://localhost:3000/coffees/${id}`)
     let coffeeCity = document.createElement('p')
     let coffeeCountry = document.createElement('p')
     let button = document.createElement('button')
-  
+    
 
     coffeePicture.src = coffee.image
     coffeeBlend.innerText = coffee.blend.name
@@ -23,6 +23,7 @@ fetch(`http://localhost:3000/coffees/${id}`)
     coffeeCity.innerText = coffee.coffee_roaster.city
     coffeeCountry.innerText = coffee.coffee_roaster.country
     button.innerHTML = `<a href="checkout.html?id=${coffee.cart_id}">Add to Cart</a>`
+  
     document.body.append(coffeePicture, coffeeBlend, coffeeFlavor, coffeeName, coffeeCity, coffeeCountry,button)
 
     button.addEventListener('click', function(){
