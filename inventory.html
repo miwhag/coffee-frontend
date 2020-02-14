@@ -8,11 +8,13 @@
 
 <body>
     <header>
-        <img src="inventory.png">
+        <h1>INVENTORY</h1>
         <a href="index.html">
             <img class="home" src="./home.png">
         </a>
-       
+        <a href="coffee.html">
+            <img class="home" src="./coffee.png">
+        </a>
     </header>
 
 <main>
@@ -31,7 +33,7 @@
 
 <div class="coffe_forms">
     <section>
-        <h1>Add Roaster</h1>
+        <h2>Add Roaster</h2>
         <form method="POST" action="http://localhost:3000/coffee_roasters">
             <input name="name" type="text" placeholder="Name">
             <input name="city" type="text" placeholder="City">
@@ -42,7 +44,7 @@
     </section>
 
     <section>
-        <h1 > Add Coffee Blend</h1 >
+        <h2> Add Coffee Blend</h2 >
         <form method="POST" action="http://localhost:3000/coffees">
             <select class="roaster" name="coffee_roaster"></select>
             <select class = "blend" name="blend"></select>

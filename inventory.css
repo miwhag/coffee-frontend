@@ -68,10 +68,9 @@ header {
 }
 
 .home {
-	width: 6em;
 	height: 4.7em;
 	padding-top: 2em;
-	padding-right: 3em;
+	padding-right: 1.5em;
 }
 
 main {
@@ -87,17 +86,24 @@ section {
 }
 
 
-h1 {
+h1{
+	font-size: 50px;
+	color: black;
+	text-transform: uppercase;
+	font-weight: normal;
+	line-height: 1;
+	padding-right: 0.5em;
+	padding-top:0.7em;
+  
+  }
+
+h2{
 	font-size: 2em;
 	padding-top: 3em;
 	text-align: center;
 	margin-left: 1em;
+	
 } 
-
-
-img {
-	height: 10em;
-}
 
 
 form {
