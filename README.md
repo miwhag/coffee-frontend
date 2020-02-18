@@ -41,7 +41,7 @@ This was a one week, Mod 2, fullstack project. We made this for a singular coffe
 
 ### Authors
 
-* Alice - [Github Repo](https://github.com/Paradafaii28)
+* Parada (Alice) Richardson - [Github Repo](https://github.com/Paradafaii28)
 * Miwha Geschwind - [Github Repo](https://github.com/miwhag)
 
 
