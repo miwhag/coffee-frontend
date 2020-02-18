@@ -54,35 +54,38 @@ body {
 }
 
 header {
-    height: 17em;
+    height: 19em;
     background-color:whitesmoke;
-    display: flex;
-    justify-content: flex-end;
+    display: block;
     }
 
+.image_container{
+display: flex;
+justify-content: center;
+}
+
 .logo {
-    width: 20em;
-    height: 12em;
-    padding-right: 15em;
-    align-self: center;
+   height: 11em;
+
 }
 
 .cart {
-width: 2.5em;
-height: 2.5em;
-padding-top: 2em;
-
+width: 2em;
+height: 2em;
+padding-right: 0.5em;
 }
 
 .icons {
-padding: 0.3em;
+display: flex; 
+justify-content: flex-end;
 }
 
 a { 
     color:black; 
     text-decoration: none; 
     padding: 1em;
-    padding-right: 2em;
+    padding-right: 0.5em;
+    padding-top: 2em;
 }
 
 a:visited { 
