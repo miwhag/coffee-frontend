@@ -24,7 +24,7 @@ body {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    color: black; 
+    color:grey; 
 }
 
 .item {
@@ -43,12 +43,12 @@ body {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    color: black;  
+    color: grey;  
     align-items: center;
 }
 
 .coffeeNameContainer {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid whitesmoke;
     padding-bottom: 1em;
     margin: 1em;
  } 
