@@ -21,9 +21,7 @@ This was a one week, Mod 2, fullstack project. We made this for a singular coffe
     * Track items you have in your inventory 
     * Delete function(in works)
 
-* The View Coffee Page will show you all of the coffees that we have in our inventory. It matches the data on the inventory page, only this allows you to visually see what we have in our database, as well as show information about individual coffees. 
-
-You can also click the link of any coffee on the page and will be given the option to add it to your cart.
+* The View Coffee Page will show you all of the coffees that we have in our inventory. It matches the data on the inventory page, only this allows you to visually see what we have in our database, as well as show information about individual coffees. You can also click the link of any coffee on the page and will be given the option to add it to your cart.
 
 
 * Finally our Cart shows all of the items currently stored in our Cart model. You can delete it from the cart by clicking delete. 
