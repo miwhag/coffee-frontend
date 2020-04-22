@@ -1,4 +1,4 @@
-# Module 2 Fullstack Coffee App 
+# Coffee App 
 
 This was a one week, Mod 2, fullstack project. We made this for a singular coffee shop, one who deals with providing a number of roasters at their shop. Our intention was to create a system for ordering and tracking inventory. Feel free to take a look around -- 
 
