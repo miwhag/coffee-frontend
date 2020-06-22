@@ -1,6 +1,7 @@
 const params = new URLSearchParams(window.location.search)
 const ul = document.querySelector('ul')
 
+
 fetch('http://localhost:3000/coffees')
 .then(response => response.json())
 .then(coffees => {
